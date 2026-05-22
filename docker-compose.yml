@@ -1,0 +1,11 @@
+services:
+  astro-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: astro-mcp-api
+    restart: unless-stopped
+    ports:
+      - "8111:8111"
+    environment:
+      - PORT=8111
